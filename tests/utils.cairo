@@ -33,5 +33,4 @@ pub fn deploy_contract(initial_value: u32, kill_switch: bool) -> ContractAddress
     ];
     let (contract_address, _) = contract.deploy(@constructor_args).unwrap();
     contract_address
-
 }

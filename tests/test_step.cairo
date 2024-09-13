@@ -25,7 +25,6 @@ fn check_transfer_ownership_as_owner() {
     dispatcher.transfer_ownership(Accounts::NEW_OWNER());
     let current_owner = dispatcher.owner();
 
-   
     assert!(current_owner == Accounts::NEW_OWNER(), "Owner not changed");
     stop_cheat_caller_address(contract_address);
 }

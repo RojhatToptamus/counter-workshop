@@ -11,13 +11,15 @@ fn test_counter_event() {
     let mut spy = spy_events();
     dispatcher.increase_counter();
 
-    spy.assert_emitted(@array![ 
-        (
-            contract_address,
-            counter_contract::Event::CounterIncreased(
-                counter_contract::CounterIncreased { value: 16 }
-            )
-        )
-    ]);
-
+    spy
+        .assert_emitted(
+            @array![
+                (
+                    contract_address,
+                    counter_contract::Event::CounterIncreased(
+                        counter_contract::CounterIncreased { value: 16 }
+                    )
+                )
+            ]
+        );
 }
